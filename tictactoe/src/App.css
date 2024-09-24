@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+.app{
+  height: 100vh;
+  width: 100vw;
+  background: #ccc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gameBoardContainer{
+  max-height: 60vh;
+  max-width: 40vw;
+  height: 100%;
+  width: 100%;
+  background-color: #666;
+  box-shadow:
+  0 -4px 15px #aaa, 
+  0 4px 6px #aaa;  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.fc {
+  flex-direction: column;
+}
+
+.playersInfo{
+  border: 1px solid #aaa;
+  width: 100%;
+  font-size: 18px;
+}
+.playerOne{
+  height: 40px;
+  width: 50%;
+  border-right: 1px solid #ddd;
+  color: #ddd;
+}
+.playerTwo{
+  height: 40px;
+  width: 50%;
+  color: #ddd;
+}
+.showUserName{
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active{
+  color: #333;
+  background-color: #ddd;
+}
+
+.sa{
+  justify-content: space-around;
+}
+
+.fs{
+  justify-content: flex-start;
+}
+
+input{
+  border: none;
+  height: 20px;
+  background-color: #bbb;
+  outline: none;
+  color: #333;
+}
+
+.gameSquareBox{
+  height: 60px;
+  width: 60px;
+  background-color: #ccc;
+  color: #666;
+  border-radius: 4px;
+  font-size: 40px;
+}
+
+.gameRow{
+  display: flex; 
+  gap: 10px;
+  flex-direction: row;
+}
+.gamebox{
+  width: 500px;
+  height: 800px;
+
+}
+
+.flexRow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.winnerStatus{
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 8px;
+  width: 40vw;
+  flex-direction: column;
+}
+
+.winnerName{
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 4px;
+}
+
+
+
+.btn{
+  color : #ddd;
+  background-color: #333;
+  border: 0;
+  outline: none;
+  height: 32px;
+  font-size: 24px;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+
+.box{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 40vw;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 500px) {
+  .gameBoardContainer{
+    max-height: 60vh;
+    max-width: 100vw;
+    height: 100%;
+    width: 100%;
+    background-color: #666;
+    box-shadow:
+    0 -4px 15px #aaa, 
+    0 4px 6px #aaa;  
   }
-  to {
-    transform: rotate(360deg);
+  .box{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+  }
+  .winnerStatus{
+    width: 100vw;
   }
 }
